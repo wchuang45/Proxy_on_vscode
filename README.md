@@ -112,10 +112,13 @@ curl -I https://www.google.com
 proxy_off
 ```
 
+---
+
 ## 常见排错清单 (Troubleshooting)
 
-| **报错现象** | **可能原因** | **解决办法** | 
-| `bash: proxy_on: command not found` | 当前服务器的 `~/.bashrc` 未写入或未刷新 | 重新执行 **Step 3** 与 **Step 4** | 
-| `curl: (7) Failed to connect ... Connection refused` | 1\. Windows 端 Clash 未启动  2\. SSH 隧道未建立或端口未映射 | 1\. 检查 Windows Clash 运行状态  2\. 检查 `~/.ssh/config` 是否包含 `RemoteForward`  3\. VS Code 重新载入窗口 | 
-| VS Code 下方“端口 (Ports)”显示异常 | 转发方向配反或误点了手动转发 | 删除 Ports 面板里的冲突项，依赖 `ssh config` 自动转发 | 
-| `Git clone` 依然很慢 | Git 未读取环境变量代理 | 运行：`git config --global http.proxy http://127.0.0.1:7890` | 
+| 报错现象 | 可能原因 | 解决办法 |
+| :--- | :--- | :--- |
+| `bash: proxy_on: command not found` | 当前服务器的 `~/.bashrc` 未写入或未刷新 | 重新执行 **Step 3** 与 **Step 4** |
+| `curl: (7) Failed to connect ... Connection refused` | 1. Windows 端 Clash 未启动<br>2. SSH 隧道未建立或端口未映射 | 1. 检查 Windows Clash 运行状态<br>2. 检查 `~/.ssh/config` 是否包含 `RemoteForward`<br>3. VS Code 重新载入窗口 |
+| VS Code 下方“端口 (Ports)”显示异常 | 转发方向配反或误点了手动转发 | 删除 Ports 面板里的冲突项，依赖 `ssh config` 自动转发 |
+| `Git clone` 依然很慢 | Git 未读取环境变量代理 | 运行：`git config --global http.proxy http://127.0.0.1:7890` |
