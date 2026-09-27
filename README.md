@@ -84,7 +84,6 @@ EOF
 
 ```
 source ~/.bashrc
-
 ```
 
 ### Step 5. 验证与日常使用
@@ -93,7 +92,6 @@ source ~/.bashrc
 
 ```
 proxy_on
-
 ```
 
 终端将输出提示：`[+] Proxy enabled (127.0.0.1:7890)`。
@@ -102,7 +100,6 @@ proxy_on
 
 ```
 curl -I https://www.google.com
-
 ```
 
 若返回 `HTTP/2 200` 或 `HTTP/1.1 200 OK`，说明代理配置成功。
@@ -113,7 +110,6 @@ curl -I https://www.google.com
 
 ```
 proxy_off
-
 ```
 
 ## 常见排错清单 (Troubleshooting)
